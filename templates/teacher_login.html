@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Login - ChemQuest</title>
+  <style>
+    body {
+      background-color: #f5f5dc;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .header {
+      background-color: #67a276;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      position: fixed;
+      top: -7px;
+      left: 10px;
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .form-container input[type=text],
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      width: 100%;
+      background-color: #67a276;
+      color: white;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #4d865e;
+    }
+
+    .form-container .cancelbtn {
+      background-color: #d9534f;
+    }
+
+    .imgcontainer {
+      text-align: center;
+    }
+
+    .imgcontainer img.avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="{{ url_for('home') }}">
+    <img src="{{ url_for('static', filename='Logo.png') }}" alt="ChemQuest Logo" class="logo">
+  </a>
+
+  <div class="header">Teacher Login</div>
+
+  <div class="form-container">
+    <form action="/teacher_login_submit" method="post">
+      <div class="imgcontainer">
+        <img src="{{ url_for('static', filename='avataricon.png') }}" alt="Avatar" class="avatar">
+      </div>
+
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <button type="button" class="cancelbtn">Cancel</button>
+
+      <div class="form-footer">
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label><br>
+        <span>Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

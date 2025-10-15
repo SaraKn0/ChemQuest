@@ -1,0 +1,416 @@
+{
+    "talbot": {
+        "password": "10101001",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "rara": {
+        "password": "rarar",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "4": {
+        "password": "4",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "ll": {
+        "password": "ll",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "12345": {
+        "password": "12345",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "yr": {
+        "password": "yr",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "s": {
+        "password": "s",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+<<<<<<< HEAD
+                "correct": 0,
+                "attempts": 0
+=======
+                "correct": 2,
+                "attempts": 2
+>>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "sw": {
+        "password": "w",
+        "role": "Student",
+        "period": "1B",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 1,
+                "attempts": 1
+            }
+        }
+    },
+    "sarak": {
+        "password": "123",
+        "role": "Student",
+        "period": "2D",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 1
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "sa": {
+        "password": "123",
+        "role": "Student",
+        "period": "1C",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 4
+            }
+        }
+    },
+    "x": {
+        "password": "x",
+        "role": "Student",
+        "period": "1B",
+        "scores": {
+            "naming": {
+                "correct": 1,
+                "attempts": 1
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "e": {
+        "password": "e",
+        "role": "Student",
+        "period": "1B",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 1,
+                "attempts": 3
+            }
+        }
+    },
+    "r": {
+        "password": "r",
+        "role": "Student",
+        "period": "2A",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "a": {
+        "password": "a",
+        "role": "Student",
+        "period": "1D",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "lolo": {
+        "password": "abcd",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "hiii": {
+        "password": "lkjhgfdsa",
+        "role": "Student",
+        "period": "1A",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "c": {
+        "password": "c",
+        "role": "Student",
+        "period": "1B",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "z": {
+        "password": "z",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "d": {
+        "password": "d",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 2,
+                "attempts": 2
+            }
+        }
+    },
+    "b": {
+        "password": " ",
+        "role": "Teacher",
+        "period": null,
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+<<<<<<< HEAD
+    "sk": {
+        "password": "123",
+=======
+    "w": {
+        "password": "w",
+        "role": "Student",
+        "period": "1C",
+        "scores": {
+            "naming": {
+                "correct": 1,
+                "attempts": 1
+            },
+            "formula": {
+                "correct": 1,
+                "attempts": 2
+            }
+        }
+    },
+    "2": {
+        "password": "2",
+        "role": "Student",
+        "period": "1B",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 2
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "ws": {
+        "password": "s",
+        "role": "Student",
+        "period": "1A",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+    "sz": {
+        "password": "x",
+>>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
+        "role": "Student",
+        "period": "1C",
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+<<<<<<< HEAD
+    "skk": {
+        "password": "123",
+        "role": "Student",
+        "period": "2C",
+=======
+    "q": {
+        "password": "s",
+        "role": "Student",
+        "period": "1B",
+>>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    },
+<<<<<<< HEAD
+    "sk12": {
+        "password": "123",
+        "role": "Student",
+        "period": "1D",
+=======
+    "f": {
+        "password": "f",
+        "role": "Student",
+        "period": "1B",
+>>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
+        "scores": {
+            "naming": {
+                "correct": 0,
+                "attempts": 0
+            },
+            "formula": {
+                "correct": 0,
+                "attempts": 0
+            }
+        }
+    }
+}

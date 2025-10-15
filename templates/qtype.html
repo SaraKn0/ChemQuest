@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style>
+   body {
+            background-color: rgba(240, 240, 240, 0.94);
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            margin: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        } 
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #67a276;
+            color: white;
+            font-size: 20px;
+            padding: 12px 24px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #42674d;
+            transform: scale(1.05);
+        }
+
+        
+
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+</style>
+ <body>
+    <div class = "container">
+        <h1><font size = "6">Choose Type of Question</font></h1>
+        <a href="/questions">
+            <button class="button" style="background:#67a276;">
+              Practice - Naming
+            </button>
+        </a>
+
+        </button>
+        <p>
+            <a href="/name-to-formula">
+              <button class="button" style="background:#67a276;">
+                Practice - Formula
+              </button>
+            </a>
+          </p>
+          
+
+    </div>
+
+
+ </body>   

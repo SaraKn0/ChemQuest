@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select a Class Set</title> 
+</head>
+<body style="font-family: Arial; text-align:center; background-color:#f5f5dc;">
+    <!-- Page heading -->
+    <h2>Select Class Period to View Students</h2>
+
+    <!-- This form will send a POST request when submitted -->
+    <form method="POST">
+
+        <!-- Dropdown menu for selecting class period -->
+        <select name="period" required>
+            <option value="">-- Select Period --</option> <!-- Default option -->
+            <option value="1A">1A</option>
+            <option value="1B">1B</option>
+            <option value="1C">1C</option>
+            <option value="1D">1D</option>
+            <option value="2A">2A</option>
+            <option value="2B">2B</option>
+            <option value="2C">2C</option>
+            <option value="2D">2D</option>
+        </select>
+
+        <br><br>
+
+        <!-- Button to submit the form -->
+        <button type="submit">View Students</button>
+    </form>
+</body>
+</html>

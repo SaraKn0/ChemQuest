@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChemQuest Questions</title>
+        <style>
+            body {
+                background-color: #f5f5dc;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                /*Creating space for header (fixed)*/
+                padding-top: 80px;
+                text-align: center;
+            }
+            /*Styling for header*/
+            .header {
+                background: rgba(103, 162, 118, 0.95);
+                color: white;
+                padding: 15px 20px;
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                position: fixed;
+                top: 0;
+                left: 0;
+                /* Allows buttons to be arranged in a row or column by creating it into flexbox*/
+                display: flex;
+                /*Horizontally alligning the elements*/
+                justify-content: space-between;
+                align-items: center;
+                /*Makes sure header stays on top, even if scrolling*/
+                z-index: 1000;
+            }
+
+            /*Title text inside the header*/
+            .header .title {
+                margin-left: 20px;
+                font-size: 30px;
+                letter-spacing: 1px;
+            }
+
+            /*Navigation links container*/
+            .header .nav-links {
+                margin-right: 20px;
+            }
+
+            /*Individual navigation links*/
+            .header .nav-links a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            /*Hover effect for navigation links*/
+            .header .nav-links a:hover {
+                text-decoration: underline;
+            }
+
+            /*White rectangle in centre containing question and input*/
+            .rectangle {
+                width: 90%;
+                max-width: 640px;
+                margin: auto;
+                padding: 40px 30px;
+                background: #ffffff;
+                box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+                border-radius: 14px;
+            }
+
+            /*Main heading*/
+            h1 {
+                color: #4d865e;
+                margin-bottom: 25px;
+            }
+
+            /*Box that displays question*/
+            .question-box {
+                font-size: 22px;
+                padding: 20px;
+                background: #e3f2fd;
+                /*Adds 6 pixel thick solid line to left of question box*/
+                border-left: 6px solid #67a276;
+                border-radius: 8px;
+                margin-bottom: 25px;
+                box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+            }
+
+            /*Box for entering answer*/
+            .input-box {
+                padding: 12px;
+                width: 280px;
+                font-size: 16px;
+                border-radius: 6px;
+                border: 1px solid #bbb;
+                box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05);
+            }
+            /*Styling for buttons*/
+            .button {
+                padding: 10px 20px;
+                border: none;
+                background: #67a276;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 6px;
+                margin: 5px;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+            }
+             /*Button hover effect*/
+            .button:hover {
+                background: #4d865e;
+                /*Moves upward by 1 pixel when cursor hovers over button*/
+                transform: translateY(-1px);
+            }
+            /*Container for answer input and buttons*/
+            .answer-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*Prevents elements from wrapping into new line */
+                flex-wrap: nowrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            /*Container for Get Answer and Get Hint buttons*/
+            .extra-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+
+            /*Subheadings (answer feedback and score*/
+            h3, h4 {
+                color: #000000;
+                margin-top: 20px;
+            }
+            /*Hint box styling*/
+            .hint-box {
+                color: #222;
+                font-weight: 600;
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #fffde7;
+                border: 1px solid #fdd835;
+                border-radius: 6px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                /*Lets box wrap tightly around text*/
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <!Fixed header wth title and nav link>
+        <div class="header">
+            <div class="title">ChemQuest</div>
+            <div class="nav-links">
+                <!Link back to student dashboard>
+                <a href="/student_dashboard">Home</a>
+            </div>
+        </div>
+
+        <div class="rectangle">
+            <!Central white box containing practice content>
+            <h1>Practice Mode</h1>
+
+            <!Box displaying current question>
+            <div class="question-box">
+                <p>{{ question }}</p>
+            </div>
+            
+            <!Row with answer input and buttons>
+            <div class="answer-row">
+                <form method="POST" action="/questions" style="display: flex; align-items: center; gap: 10px;">
+                    <!hidden input to pass session token>
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <!user input box>
+                    <input class="input-box" name="answer" required>
+                    <!change button style dependnig on whether last answer was incorrect>
+                    {% if answer == "Incorrect" %}
+                    <button type="submit" class="button" style="background:#e6554a;">Try Again</button>
+                    {% else %}
+                    <button type="submit" class="button">Submit</button>
+                    {% endif %}
+                </form>
+                <!For for getting next question>
+                <form method="GET" action="/questions">
+                    <button type="submit" class="button" style="background:#769fd8;">Next Question</button>
+                </form>
+            </div>
+
+            <!Section with extra options: Get Answer/ Get Hint>
+            <div class="extra-buttons">
+                <!Form for revealing correct answer>
+                <form method="GET" action="/get-answer">
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <button type="submit" class="button" style="background:#ffcc00; color:#333;">Get Answer</button>
+                </form>
+
+                <!Form for getting a hint>
+                <form method="POST" action="/questions_hint">
+                    <input type="hidden" name="question" value="{{ question }}">
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <button type="submit" class="button" style="background:#9f56b9;">Get Hint</button>
+                </form>
+            </div>
+
+            <!If there is a hint, display it inside a styled box>
+            {% if hint %}
+                <div class="hint-box">💡 Hint: {{ hint }}</div>
+            {% endif %}
+
+            <!Display users result>
+            <h3>{{ answer }}</h3>
+            <!Display users score>
+            <h4>{{ score }}</h4>
+        </div>
+    </body>
+</html>

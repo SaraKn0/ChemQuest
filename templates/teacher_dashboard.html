@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #67a276;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .welcome {
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+
+        .container {
+            margin: 60px auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #67a276;
+            color: white;
+            padding: 15px 30px;
+            margin: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .button:hover {
+            background-color: #4d865e;
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='Logo.png') }}" alt="Chem Quest Logo" class="logo">
+    </a>
+
+    <div class="header">
+        ChemQuest Teacher Dashboard
+        <div class="welcome">Welcome, {{ username|capitalize }}!</div>
+    </div>
+
+    <!--Links for teacher to click to see students progress, manage students in a class-->
+    <div class="container">
+        <button class="button" onclick="location.href='/naming-progress'">View Class Progress - Naming</button>
+        <button class="button" onclick="location.href='/formula-progress'">View Class Progress - Formula</button>
+        <button class="button" onclick="location.href='/manage_students'">Manage Students</button>
+        <button class="button" onclick="location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>

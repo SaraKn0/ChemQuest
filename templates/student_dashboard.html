@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <!Set viewport for responsiveness on all devices>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /*Header bar at top styling*/
+        .header {
+            background-color: #67a276;
+            color: white;
+            padding: 30px 0;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /*So logo can be positioned inside*/
+            position: relative;
+        }
+
+
+        /*Logo styling inside the header*/
+        .header .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            /*Centre logo vertically*/
+            transform: translateY(-50%);
+            height: 100px;
+        }
+
+        /*Main content container*/
+        .container {
+            margin-top: 50px;
+        }
+
+        /*Welcome heading*/
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /*Subtext under heading*/
+        p {
+            font-size: 20px;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+
+        /*Group of buttons arranged vertically*/
+        .button-group {
+            display: flex;
+            /*Stack buttons vertically*/
+            flex-direction: column;
+            align-items: center;
+            /*Space between buttons*/
+            gap: 50px; 
+            margin-top: 25px;
+        }
+
+        /*Individual button styling*/
+        .button {
+            background-color: #67a276;
+            color: white;
+            font-size: 22px; 
+            padding: 18px 40px; 
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+            /*Hover transition*/
+            transition: 0.3s ease-in-out;
+        }
+
+        /*Hover effect for buttons*/
+        .button:hover {
+            /*Darker green when hovering*/
+            background-color: #4d865e;
+            /*zoom effect*/
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!Clicking logo sends user back to home>
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='Logo.png') }}" alt="ChemQuest Logo" class="logo">
+        </a>
+        ChemQuest Student Dashboard
+    </div>
+
+    <!Main container holding welcome message and options>
+    <div class="container">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>What would you like to work on today? Choose one of the following:</p>
+
+        <!Group of two practice buttons>
+        <div class="button-group">
+            <li><a href="/clicked/formtoname" class="button">Practice - Naming</a></li>
+            <li><a href="/clicked/nametoform" class="button">Practice - Formula</a></li>
+        </div>
+    </div>
+
+</body>
+</html>

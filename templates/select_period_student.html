@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Class Period</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5dc;
+        }
+        /*margins for box, information will be in*/
+        .container {
+            margin-top: 100px;
+        }
+
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #67a276;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4d865e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--Header - Title of page-->
+        <h2>Select Your Class Period</h2>
+        <!--User is sending information - what their period is-->
+        <form method="POST">
+            <!--All period options, user can select-->
+            <select name="period" required>
+                <option value="">-- Select Period --</option>
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <option value="1C">1C</option>
+                <option value="1D">1D</option>
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="2C">2C</option>
+                <option value="2D">2D</option>
+            </select>
+            <br>
+            <!--When this button is clicked, period is stored, go to student dashboard-->
+            <button type="submit">Continue to Practice</button>
+        </form>
+    </div>
+</body>
+</html>

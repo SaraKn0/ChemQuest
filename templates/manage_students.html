@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #67a276;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            margin: 40px auto;
+            padding: 20px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #4d865e;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .student-item {
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 8px 12px;
+            color: #333;
+            background-color: #f0f0f0;
+            border-radius: 6px;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .student-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .delete-btn {
+            display: none;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /*Delete button appears when cursor hovers */
+        .student-item:hover .delete-btn {
+            display: inline-block;
+        }   
+
+        .button {
+            margin-top: 30px;
+            background-color: #67a276;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #4d865e;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        Manage Students
+    </div>
+
+    <div class="container">
+        <h2>Student List</h2>
+        <ul>
+            <!--loops through and displays students in the json file -->
+            {% for student in students %}
+                <li class="student-item">
+                {{ student }} <!--displays student's name-->
+                <form method="POST" action="/manage_students" style="margin: 0;">
+                    <input type="hidden" name="student" value="{{ student }}">
+                    <!--button to delete student from the list-->
+                    <button type="submit" class="delete-btn">Delete</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <!--a button that allows the user to return to the dashboard-->
+        <a href="/teacher_dashboard" class="button">Back to Dashboard</a>
+    </div>
+</body>
+</html>

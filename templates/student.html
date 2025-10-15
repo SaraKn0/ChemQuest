@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemQuest</title>
+    <style>
+       
+       /*Overall page layout and appearance*/
+        body {
+            background-color: #f5f5dc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            /*Arrange elements vertically*/
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /*Full viewport height*/
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            position: relative;
+        }
+
+       /*Styling for top fixed header*/
+        .header {
+            background: rgba(103, 162, 118, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /*Stays at top even if we were to scroll*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            /*Title left, links right*/
+            justify-content: space-between;
+            align-items: center;
+            /*Stay above all other content*/
+            z-index: 1000;
+        }
+
+        /*Styling for title inside header*/
+        .header .title {
+            margin-left: 20px;
+            font-size: 28px;
+        }
+
+        /*Container for nav links*/
+        .header .nav-links {
+            margin-right: 20px;
+        }
+
+        /*Styling for navigation links*/
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s ease-in-out;
+        }
+
+        /*Hover effect for nav links*/
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /*Main content container*/
+        .content {
+            margin-top: 80px;
+            position: relative;
+            /*If needed, content appears above background*/
+            z-index: 2;
+        }
+
+        /*Main heading style*/
+        .content h1 {
+            font-size: 32px;
+            color: #4d865e;
+        }
+
+        /*Paragraph text syle*/
+        .content p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /*Styling for login button*/
+        .start-button {
+            display: inline-block;
+            background-color: #67a276;
+            color: white;
+            font-size: 20px;
+            padding: 12px 24px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            /*Hover transition effect*/
+            transition: 0.3s ease-in-out;
+            /*Button shadow*/
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /*Hover effect for button*/
+        .start-button:hover {
+            /*Turns darker green when hovering*/
+            background-color: #4d865e;
+            /*Slight zoom on hover*/
+            transform: scale(1.05);
+        }
+
+        
+
+        /*Animation for fade in effect*/
+        .fade-in {
+            /*Start invisible*/
+            opacity: 0;
+            /*Fade in smoothly*/
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /*Keyframes for fade in animantion*/
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="header">
+        <div class="title">ChemQuest</div>
+        </div>
+    </div>
+
+    <!Login button with fade in animation and welcome message>
+    <div class="content fade-in">
+        <h1>Welcome to ChemQuest</h1>
+        <p>A chemistry practicing tool designed to test your knowledge</p>
+
+        <!Link to choosing your role page>
+        <a href="{{ url_for('choose_role') }}" class="start-button">Login Here</a>
+    </div>
+
+    
+</body>
+</html>

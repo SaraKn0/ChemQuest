@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChemQuest Questions</title>
+        <style>
+            body {
+                background-color: #f5f5dc;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            /*Styling for header*/
+            .header {
+                background: rgba(103, 162, 118, 0.95);
+                color: white;
+                padding: 15px 20px;
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                position: fixed;
+                top: 0;
+                left: 0;
+                /* Allows buttons to be arranged in a row or column by creating it into flexbox*/
+                display: flex;
+                /*Horizontally alligning the elements*/
+                justify-content: space-between;
+                align-items: center;
+                /*Makes sure header stays on top, even if scrolling*/
+                z-index: 1000;
+            }
+
+            /*Styling for title inside header*/
+            .header .title {
+                margin-left: 20px;
+                font-size: 30px;
+                letter-spacing: 1px;
+            }
+
+            /*Styling for nav links in header*/
+            .header .nav-links {
+                margin-right: 20px;
+            }
+
+            .header .nav-links a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 18px;
+                /*smooth hover*/
+                transition: 0.3s;
+            }
+
+            /*Hover effect for nav links*/
+            .header .nav-links a:hover {
+                text-decoration: underline;
+            }
+
+            /*White box that holds main content*/
+            .rectangle {
+                width: 90%;
+                max-width: 640px;
+                margin: auto;
+                padding: 40px 30px;
+                background: #ffffff;
+                box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+                border-radius: 14px;
+            }
+
+            /*Main heading styling*/
+            h1 {
+                color: #4d865e;
+                margin-bottom: 25px;
+            }
+
+            /*Box that shows question*/
+            .question-box {
+                font-size: 22px;
+                padding: 20px;
+                background: #e3f2fd;
+                border-left: 6px solid #67a276;
+                border-radius: 8px;
+                margin-bottom: 25px;
+                box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+            }
+
+            /*Input box for user answer*/
+            .input-box {
+                padding: 12px;
+                width: 280px;
+                font-size: 16px;
+                border-radius: 6px;
+                border: 1px solid #bbb;
+                box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05);
+            }
+
+
+            /*Styling for all buttons*/
+            .button {
+                padding: 10px 20px;
+                border: none;
+                background: #67a276;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 6px;
+                margin: 5px;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+            }
+
+            /*Hover effect for buttons*/
+            .button:hover {
+                background: #4d865e;
+                transform: translateY(-1px);
+            }
+
+            /*Container for naswer input and buttons*/
+            .answer-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*prevent wrapping*/
+                flex-wrap: nowrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            /*container for get hin and get answer buttons*/
+            .extra-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+
+            /*styling for result and score headings*/
+            h3, h4 {
+                color: #000000;
+                margin-top: 20px;
+            }
+
+            /*Box for displaying hint*/
+            .hint-box {
+                color: #222;
+                font-weight: 600;
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #fffde7;
+                border: 1px solid #fdd835;
+                border-radius: 6px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <!Fixed header with title and nav links - student can return back to their dashboard>
+        <div class="header">
+            <div class="title">ChemQuest</div>
+            <div class="nav-links">
+                <a href="/student_dashboard">Home</a>
+            </div>
+        </div>
+
+        <!Main container with questions and actions>
+        <div class="rectangle">
+            <h1>Practice Mode</h1>
+
+            <!Box displaying current question>
+            <div class="question-box">
+                <p>{{ question }}</p>
+            </div>
+
+            <!Input field and submission buttons>
+            <div class="answer-row">
+                <!Form for submitting answer>
+                <form method="POST" action="/name-to-formula" style="display: flex; align-items: center; gap: 10px;">
+                    <!--Hidden token - way to keep track of correct answer and question for specific user-->
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <input class="input-box" name="answer" required>
+                    <!--If answer is incorrect, try again button appears in red-->
+                    {% if answer == "Incorrect" %}
+                    <button type="submit" class="button" style="background:#e6554a;">Try Again</button>
+                    {% else %}
+                    <button type="submit" class="button">Submit</button>
+                    {% endif %}
+                </form>
+                <!Form to get next question>
+                <form method="GET" action="/name-to-formula">
+                    <button type="submit" class="button" style="background:#769fd8;">Next Question</button>
+                </form>
+            </div>
+
+            <!Exra actions (reveal answer or hint)>
+            <div class="extra-buttons">
+                <!Get correct answer>
+                <form method="GET" action="/get-formula">
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <button type="submit" class="button" style="background:#ffcc00; color:#333;">Get Answer</button>
+                </form>
+
+                <!Get a hint>
+                <form method="POST" action="/naming_hint">
+                    <input type="hidden" name="question" value="{{ question }}">
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <button type="submit" class="button" style="background:#9f56b9;">Get Hint</button>
+                </form>
+            </div>
+
+
+            <!Displaying  hint if available>
+            {% if hint %}
+                <div class="hint-box">💡 Hint: {{ hint }}</div>
+            {% endif %}
+
+            <!Display result and score>
+            <h3>{{answer}}</h3>
+            <h4>{{score}}</h4>
+        </div>
+    </body>
+</html>
