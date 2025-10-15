@@ -5,6 +5,11 @@ import uuid
 from chemlib import Compound, Element
 import json
 import random
+import os
+
+if not os.path.exists("student_data.json"):
+    with open("student_data.json", "w") as f:
+        f.write("{}")
 
 
 
