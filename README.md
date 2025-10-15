@@ -1,5 +1,5 @@
 # ChemQuest
-Web based learning tool made for practicing chemical compound naming and formula writing.
+Web based learning tool made for practicing chemical compound naming and formula writing.\n
 **Live Demo:** [https://chemquest.onrender.com]
 
 ## Features
