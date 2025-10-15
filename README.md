@@ -16,7 +16,7 @@ Web based learning tool made for practicing chemical compound naming and formula
 ## Known Bugs
 
 ## Support
-Contact ssing1@ocdsb.ca, blu1@ocdsb.ca, nmuth1@ocdsb.ca, skhan41@ocdsb.ca
+Contact skhan41@ocdsb.ca, ssing1@ocdsb.ca, blu1@ocdsb.ca, nmuth1@ocdsb.ca
 
 
 ## Sources
