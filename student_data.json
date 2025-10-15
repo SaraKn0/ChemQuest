@@ -4,14 +4,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "rara": {
@@ -19,14 +13,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "4": {
@@ -34,14 +22,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "ll": {
@@ -49,14 +31,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "12345": {
@@ -64,14 +40,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "yr": {
@@ -79,14 +49,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "s": {
@@ -94,19 +58,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-<<<<<<< HEAD
-                "correct": 0,
-                "attempts": 0
-=======
-                "correct": 2,
-                "attempts": 2
->>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 2, "attempts": 2 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "sw": {
@@ -114,14 +67,8 @@
         "role": "Student",
         "period": "1B",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 1,
-                "attempts": 1
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 1, "attempts": 1 }
         }
     },
     "sarak": {
@@ -129,14 +76,8 @@
         "role": "Student",
         "period": "2D",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 1
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 1 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "sa": {
@@ -144,14 +85,8 @@
         "role": "Student",
         "period": "1C",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 4
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 4 }
         }
     },
     "x": {
@@ -159,14 +94,8 @@
         "role": "Student",
         "period": "1B",
         "scores": {
-            "naming": {
-                "correct": 1,
-                "attempts": 1
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 1, "attempts": 1 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "e": {
@@ -174,14 +103,8 @@
         "role": "Student",
         "period": "1B",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 1,
-                "attempts": 3
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 1, "attempts": 3 }
         }
     },
     "r": {
@@ -189,14 +112,8 @@
         "role": "Student",
         "period": "2A",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "a": {
@@ -204,14 +121,8 @@
         "role": "Student",
         "period": "1D",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "lolo": {
@@ -219,14 +130,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "hiii": {
@@ -234,14 +139,8 @@
         "role": "Student",
         "period": "1A",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "c": {
@@ -249,14 +148,8 @@
         "role": "Student",
         "period": "1B",
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "z": {
@@ -264,14 +157,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
     "d": {
@@ -279,14 +166,8 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 2,
-                "attempts": 2
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 2, "attempts": 2 }
         }
     },
     "b": {
@@ -294,123 +175,35 @@
         "role": "Teacher",
         "period": null,
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
-<<<<<<< HEAD
     "sk": {
         "password": "123",
-=======
-    "w": {
-        "password": "w",
         "role": "Student",
         "period": "1C",
         "scores": {
-            "naming": {
-                "correct": 1,
-                "attempts": 1
-            },
-            "formula": {
-                "correct": 1,
-                "attempts": 2
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
-    "2": {
-        "password": "2",
-        "role": "Student",
-        "period": "1B",
-        "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 2
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
-        }
-    },
-    "ws": {
-        "password": "s",
-        "role": "Student",
-        "period": "1A",
-        "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
-        }
-    },
-    "sz": {
-        "password": "x",
->>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
-        "role": "Student",
-        "period": "1C",
-        "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
-        }
-    },
-<<<<<<< HEAD
     "skk": {
         "password": "123",
         "role": "Student",
         "period": "2C",
-=======
-    "q": {
-        "password": "s",
-        "role": "Student",
-        "period": "1B",
->>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     },
-<<<<<<< HEAD
     "sk12": {
         "password": "123",
         "role": "Student",
         "period": "1D",
-=======
-    "f": {
-        "password": "f",
-        "role": "Student",
-        "period": "1B",
->>>>>>> bb3fd73dad4846d21b983cbe14c68c2013dbe505
         "scores": {
-            "naming": {
-                "correct": 0,
-                "attempts": 0
-            },
-            "formula": {
-                "correct": 0,
-                "attempts": 0
-            }
+            "naming": { "correct": 0, "attempts": 0 },
+            "formula": { "correct": 0, "attempts": 0 }
         }
     }
 }
