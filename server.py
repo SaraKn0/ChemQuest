@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template, redirect, url_for, send_from_directory
 from questions import get_printable_compound, validate_answer
 from naming import validate_formula, get_formula_compound
@@ -7,7 +8,10 @@ import json
 import random
 
 
-
+# Ensure student_data.json exists even on Render
+if not os.path.exists("student_data.json"):
+    with open("student_data.json", "w") as f:
+        json.dump({}, f)
 app = Flask(__name__, static_url_path='/static')
 session = {}
 
